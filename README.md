@@ -102,7 +102,9 @@ pip install -r requirements.txt
 ```
 
 ### 2. Run the main script
+```bash
 python Notebook/melanoma.py
+```
 ---
 
 ### Future Work
