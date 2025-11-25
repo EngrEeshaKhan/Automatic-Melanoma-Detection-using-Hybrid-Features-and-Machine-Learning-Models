@@ -6,7 +6,7 @@ All code is contained in a **single Python file**, and the project includes data
 ---
 
 ## 📑 Table of Contents
-1. [Project Overview](#project-overview)  
+1. [Project Overview](#Project-overview)  
 2. [Project Structure](#project-structure)  
 3. [Dataset Description](#dataset-description)  
 4. [Methodology](#methodology)  
@@ -18,7 +18,7 @@ All code is contained in a **single Python file**, and the project includes data
 
 ---
 
-## 📘 Project Overview
+## 📘 Project-Overview
 This project implements an automated melanoma detection system using:
 
 - Hybrid feature extraction (HOG + LBP + Morphology + Color stats)  
@@ -100,4 +100,21 @@ Key Insight:
 ```bash
 pip install -r requirements.txt
 
+2. Run the main script:
+python Notebook/melanoma.py
 
+## 🔮 Future Work
+
+Add CNN-based deep learning models
+Implement Random Forest / XGBoost
+Build a web interface using Streamlit
+Add explainability (Grad-CAM)
+Deploy model using FastAPI
+
+## 📚 References
+
+See detailed research in:
+👉 References/Report.pdf
+
+## 📝 License
+This project uses the MIT License. You may modify and use with credit.
