@@ -1,12 +1,12 @@
 # 🩺 Melanoma Detection Using Hybrid Features & Machine Learning
 
-A complete machine learning pipeline for melanoma classification using hybrid texture, color, and morphological features.  
-All code is contained in a **single Python file**, and the project includes dataset files and a full research report.
+A complete machine learning pipeline for melanoma classification using hybrid texture, color, morphological, and intensity features.  
+All executable code exists inside **one Python file**.
 
 ---
 
 ## 📑 Table of Contents
-1. [Project Overview](#Project-overview)  
+1. [Project Overview](#project-overview)  
 2. [Project Structure](#project-structure)  
 3. [Dataset Description](#dataset-description)  
 4. [Methodology](#methodology)  
@@ -18,65 +18,66 @@ All code is contained in a **single Python file**, and the project includes data
 
 ---
 
-## 📘 Project-Overview
+## 📘 Project Overview
 This project implements an automated melanoma detection system using:
 
-- Hybrid feature extraction (HOG + LBP + Morphology + Color stats)  
-- Classical machine learning models (SVM, LR, DT, KNN)  
-- Performance evaluation with accuracy, precision, recall, F1-score, and confusion matrices  
+- Hybrid feature extraction (HOG + LBP + Color + Shape)  
+- Classical ML models (SVM, Logistic Regression, Decision Tree, KNN)  
+- Performance evaluation using accuracy, precision, recall, F1-score, and confusion matrices  
 
-All code is inside:  
-👉 `Notebook/melanoma.py`
+All code is located in:  
+👉 **`Notebook/melanoma.py`**
 
 ---
 
 ## 📂 Project Structure
+<img width="308" height="272" alt="image" src="https://github.com/user-attachments/assets/e397123a-45f1-4259-81cc-1a66f00c6eb1" />
 
-<img width="318" height="288" alt="image" src="https://github.com/user-attachments/assets/79b69d9e-6145-4a72-922e-3c640bc1681f" />
 
 ---
 
 ## 📦 Dataset Description
 
-- **Colored/** — Raw skin lesion images  
-- **labels.xls** — True labels for classification  
-- **features.csv** — Pre-extracted hybrid features  
+### Dataset Folder Includes:
+- **Colored/** — Original skin lesion images  
+- **labels.xls** — Actual class labels  
+- **features.csv** — Pre-extracted combined features:
   - HOG  
-  - LBP (multiple subfeatures)  
-  - Perimeter, area, compactness, eccentricity  
-  - Color mean & std  
+  - LBP  
+  - Shape features (area, perimeter, compactness, eccentricity)  
+  - Color statistics (mean & std)  
 
-This allows training ML models faster without regenerating features.
+Using precomputed features greatly speeds up training.
 
 ---
 
 ## 🛠 Methodology
 
-### **1. Preprocessing**
-- Resizing  
+### 1. Preprocessing
+- Resize images  
 - Noise removal  
-- Grayscale conversion  
-- Binary segmentation  
+- Convert to grayscale  
+- Segmentation  
 - Feature normalization  
 
-### **2. Feature Extraction**
-- **HOG** — texture patterns  
+### 2. Feature Extraction
+- **HOG** — texture  
 - **LBP** — micro-texture  
-- **Color statistics** — RGB mean/std  
-- **Shape metrics** — area, perimeter, eccentricity, compactness  
+- **Color features** — RGB means & standard deviations  
+- **Shape features** — area, perimeter, eccentricity, compactness  
 
-### **3. Models Used**
-- Support Vector Machine (SVM)  
+### 3. Machine Learning Models
+- SVM  
 - Logistic Regression  
 - Decision Tree  
 - KNN  
 
-Evaluation:
+### Evaluation Metrics
 - Accuracy  
 - Precision  
 - Recall  
 - F1-score  
-- Confusion matrices  
+- Confusion Matrix  
 
 ---
 
@@ -89,32 +90,14 @@ Evaluation:
 | Decision Tree | 0.75 | 0.72 | 0.70 | 0.71 |
 | KNN | 0.70 | 0.72 | 0.70 | 0.71 |
 
-Key Insight:
-- **Perimeter** was chosen as the **root node** in Decision Tree → highly important for melanoma classification.
+**Key Insight:**  
+- Perimeter is a highly important shape feature → chosen as the root node in Decision Tree.
 
 ---
 
 ## 🚀 How to Run
 
-1. Install dependencies:
+### 1. Install dependencies
 ```bash
 pip install -r requirements.txt
 
-2. Run the main script:
-python Notebook/melanoma.py
-
-## 🔮 Future Work
-
-Add CNN-based deep learning models
-Implement Random Forest / XGBoost
-Build a web interface using Streamlit
-Add explainability (Grad-CAM)
-Deploy model using FastAPI
-
-## 📚 References
-
-See detailed research in:
-👉 References/Report.pdf
-
-## 📝 License
-This project uses the MIT License. You may modify and use with credit.
