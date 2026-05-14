@@ -109,15 +109,15 @@ python Notebook/melanoma.py
 ---
 
 ### Future Work
-Add CNN-based deep learning
+Add CNN-based deep learning.
 
-Add Random Forest & XGBoost
+Add Random Forest & XGBoost.
 
-Build a Streamlit UI
+Build a Streamlit UI.
 
-Add explainability (Grad-CAM, SHAP)
+Add explainability (Grad-CAM, SHAP).
 
-Deploy the system using FastAPI or Flask
+Deploy the system using FastAPI or Flask.
 
 ### References
 Full research documentation:
