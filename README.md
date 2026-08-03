@@ -115,7 +115,7 @@ Add Random Forest & XGBoost
 
 Build a Streamlit UI
 
-Add explainability (Grad-CAM, SHAP).
+Add explainability (Grad-CAM, SHAP)
 
 Deploy the system using FastAPI or Flask.
 
