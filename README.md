@@ -109,7 +109,7 @@ python Notebook/melanoma.py
 ---
 
 ### Future Work
-Add CNN-based deep learning.
+Add CNN-based deep learning
 
 Add Random Forest & XGBoost.
 
