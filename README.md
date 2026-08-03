@@ -113,7 +113,7 @@ Add CNN-based deep learning
 
 Add Random Forest & XGBoost
 
-Build a Streamlit UI.
+Build a Streamlit UI
 
 Add explainability (Grad-CAM, SHAP).
 
