@@ -117,7 +117,7 @@ Build a Streamlit UI
 
 Add explainability (Grad-CAM, SHAP)
 
-Deploy the system using FastAPI or Flask.
+Deploy the system using FastAPI or Flask
 
 ### References
 Full research documentation:
